@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark Romance Theme */
+  --background: #0a0506;
+  --foreground: #f5ebe0;
+  --burgundy: #6b0f1a;
+  --burgundy-light: #8b1e2b;
+  --burgundy-dark: #4a0a12;
+  --gold: #d4af37;
+  --gold-light: #f0d057;
+  --gold-dark: #b8941f;
+  --cream: #f5ebe0;
+  --cream-dark: #e5d5c0;
+  --black: #0a0506;
+  --gray-dark: #1a1516;
+  --gray-medium: #2a2021;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-burgundy: var(--burgundy);
+  --color-burgundy-light: var(--burgundy-light);
+  --color-burgundy-dark: var(--burgundy-dark);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-gray-dark: var(--gray-dark);
+  --color-gray-medium: var(--gray-medium);
+  --font-playfair: var(--font-playfair);
+  --font-cormorant: var(--font-cormorant);
+  --font-inter: var(--font-inter);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Georgia, serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--burgundy);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--burgundy-light);
+}
+
+/* Smooth animations */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
